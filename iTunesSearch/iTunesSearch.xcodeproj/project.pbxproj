@@ -13,6 +13,12 @@
 		AC9FD0082BC110B900395FC2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AC9FD0072BC110B900395FC2 /* Base */; };
 		AC9FD00A2BC110BA00395FC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9FD0092BC110BA00395FC2 /* Assets.xcassets */; };
 		AC9FD00D2BC110BA00395FC2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AC9FD00C2BC110BA00395FC2 /* Base */; };
+		AC9FD0152BC1129500395FC2 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FD0142BC1129500395FC2 /* SearchResultViewController.swift */; };
+		AC9FD0192BC1152B00395FC2 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FD0182BC1152B00395FC2 /* SearchResultTableViewCell.swift */; };
+		AC9FD01C2BC1154E00395FC2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AC9FD01B2BC1154E00395FC2 /* SnapKit */; };
+		AC9FD01F2BC1157900395FC2 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = AC9FD01E2BC1157900395FC2 /* RxCocoa */; };
+		AC9FD0212BC1157900395FC2 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = AC9FD0202BC1157900395FC2 /* RxRelay */; };
+		AC9FD0232BC1157900395FC2 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AC9FD0222BC1157900395FC2 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,8 @@
 		AC9FD0092BC110BA00395FC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC9FD00C2BC110BA00395FC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC9FD00E2BC110BA00395FC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC9FD0142BC1129500395FC2 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		AC9FD0182BC1152B00395FC2 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC9FD0212BC1157900395FC2 /* RxRelay in Frameworks */,
+				AC9FD01F2BC1157900395FC2 /* RxCocoa in Frameworks */,
+				AC9FD0232BC1157900395FC2 /* RxSwift in Frameworks */,
+				AC9FD01C2BC1154E00395FC2 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +71,8 @@
 				AC9FD0002BC110B900395FC2 /* AppDelegate.swift */,
 				AC9FD0022BC110B900395FC2 /* SceneDelegate.swift */,
 				AC9FD0042BC110B900395FC2 /* ViewController.swift */,
+				AC9FD0142BC1129500395FC2 /* SearchResultViewController.swift */,
+				AC9FD0182BC1152B00395FC2 /* SearchResultTableViewCell.swift */,
 				AC9FD0062BC110B900395FC2 /* Main.storyboard */,
 				AC9FD0092BC110BA00395FC2 /* Assets.xcassets */,
 				AC9FD00B2BC110BA00395FC2 /* LaunchScreen.storyboard */,
@@ -83,6 +97,12 @@
 			dependencies = (
 			);
 			name = iTunesSearch;
+			packageProductDependencies = (
+				AC9FD01B2BC1154E00395FC2 /* SnapKit */,
+				AC9FD01E2BC1157900395FC2 /* RxCocoa */,
+				AC9FD0202BC1157900395FC2 /* RxRelay */,
+				AC9FD0222BC1157900395FC2 /* RxSwift */,
+			);
 			productName = iTunesSearch;
 			productReference = AC9FCFFD2BC110B900395FC2 /* iTunesSearch.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +131,10 @@
 				Base,
 			);
 			mainGroup = AC9FCFF42BC110B900395FC2;
+			packageReferences = (
+				AC9FD01A2BC1154E00395FC2 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				AC9FD01D2BC1157900395FC2 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = AC9FCFFE2BC110B900395FC2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,7 +163,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC9FD0052BC110B900395FC2 /* ViewController.swift in Sources */,
+				AC9FD0192BC1152B00395FC2 /* SearchResultTableViewCell.swift in Sources */,
 				AC9FD0012BC110B900395FC2 /* AppDelegate.swift in Sources */,
+				AC9FD0152BC1129500395FC2 /* SearchResultViewController.swift in Sources */,
 				AC9FD0032BC110B900395FC2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,7 +323,6 @@
 				INFOPLIST_FILE = iTunesSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -329,7 +354,6 @@
 				INFOPLIST_FILE = iTunesSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -371,6 +395,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AC9FD01A2BC1154E00395FC2 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		AC9FD01D2BC1157900395FC2 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AC9FD01B2BC1154E00395FC2 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC9FD01A2BC1154E00395FC2 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		AC9FD01E2BC1157900395FC2 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC9FD01D2BC1157900395FC2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		AC9FD0202BC1157900395FC2 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC9FD01D2BC1157900395FC2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		AC9FD0222BC1157900395FC2 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC9FD01D2BC1157900395FC2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AC9FCFF52BC110B900395FC2 /* Project object */;
 }
