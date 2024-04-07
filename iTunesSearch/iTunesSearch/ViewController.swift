@@ -6,15 +6,34 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
     
     let searchController = UISearchController(searchResultsController: SearchResultViewController())
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureNavigation()
+        bind()
+    }
+    
+    func bind() {
+        
+        guard let resultVC = searchController.searchResultsController as? SearchResultViewController else { return }
+        
+        resultVC.searchTableView.rx.modelSelected(AppStoreResult.self)
+            .bind(with: self) { owner, data in
+                
+                let nextVC = DetailViewController()
+                nextVC.update(data)
+                
+                owner.navigationController?.pushViewController(nextVC, animated: true)
+                
+            }.disposed(by: disposeBag)
     }
 }
 
@@ -23,7 +42,7 @@ extension ViewController: UISearchBarDelegate {
         
         guard let query = searchController.searchBar.text,
               !query.trimmingCharacters(in: .whitespaces).isEmpty,
-              let resultVC = searchController.searchResultsController as? SearchResultViewController  else {
+              let resultVC = searchController.searchResultsController as? SearchResultViewController else {
             return
         }
         

@@ -26,6 +26,7 @@
 		AC9FD02E2BC252BF00395FC2 /* AppStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FD02D2BC252BF00395FC2 /* AppStoreModel.swift */; };
 		AC9FD0312BC25BE800395FC2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AC9FD0302BC25BE800395FC2 /* Kingfisher */; };
 		AC9FD0332BC2D72200395FC2 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FD0322BC2D72200395FC2 /* APIError.swift */; };
+		AC9FD0352BC2E45300395FC2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FD0342BC2E45300395FC2 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		AC9FD02B2BC2528C00395FC2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		AC9FD02D2BC252BF00395FC2 /* AppStoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreModel.swift; sourceTree = "<group>"; };
 		AC9FD0322BC2D72200395FC2 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		AC9FD0342BC2E45300395FC2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				AC9FD0142BC1129500395FC2 /* SearchResultViewController.swift */,
 				AC9FD0242BC11B9800395FC2 /* SearchResultViewModel.swift */,
 				AC9FD0182BC1152B00395FC2 /* SearchResultTableViewCell.swift */,
+				AC9FD0342BC2E45300395FC2 /* DetailViewController.swift */,
 				AC9FD0262BC2519200395FC2 /* AppStoreAPI.swift */,
 				AC9FD02D2BC252BF00395FC2 /* AppStoreModel.swift */,
 				AC9FD02B2BC2528C00395FC2 /* APIManager.swift */,
@@ -185,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC9FD0352BC2E45300395FC2 /* DetailViewController.swift in Sources */,
 				AC9FD02C2BC2528C00395FC2 /* APIManager.swift in Sources */,
 				AC9FD0252BC11B9800395FC2 /* SearchResultViewModel.swift in Sources */,
 				AC9FD0052BC110B900395FC2 /* ViewController.swift in Sources */,

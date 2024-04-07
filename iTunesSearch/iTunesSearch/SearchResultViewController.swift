@@ -22,6 +22,7 @@ class SearchResultViewController: UIViewController {
         super.viewDidLoad()
         
         configure()
+        bind()
     }
     
     func update(search: String) {
@@ -45,6 +46,9 @@ class SearchResultViewController: UIViewController {
                 cell.appIconImageView.kf.setImage(with: url)
                 
             }.disposed(by: disposeBag)
+    }
+    
+    func bind() {
     }
 }
 
