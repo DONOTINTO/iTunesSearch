@@ -25,6 +25,7 @@
 		AC9FD02C2BC2528C00395FC2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FD02B2BC2528C00395FC2 /* APIManager.swift */; };
 		AC9FD02E2BC252BF00395FC2 /* AppStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FD02D2BC252BF00395FC2 /* AppStoreModel.swift */; };
 		AC9FD0312BC25BE800395FC2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AC9FD0302BC25BE800395FC2 /* Kingfisher */; };
+		AC9FD0332BC2D72200395FC2 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FD0322BC2D72200395FC2 /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		AC9FD0262BC2519200395FC2 /* AppStoreAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreAPI.swift; sourceTree = "<group>"; };
 		AC9FD02B2BC2528C00395FC2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		AC9FD02D2BC252BF00395FC2 /* AppStoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreModel.swift; sourceTree = "<group>"; };
+		AC9FD0322BC2D72200395FC2 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				AC9FD0262BC2519200395FC2 /* AppStoreAPI.swift */,
 				AC9FD02D2BC252BF00395FC2 /* AppStoreModel.swift */,
 				AC9FD02B2BC2528C00395FC2 /* APIManager.swift */,
+				AC9FD0322BC2D72200395FC2 /* APIError.swift */,
 				AC9FD0062BC110B900395FC2 /* Main.storyboard */,
 				AC9FD0092BC110BA00395FC2 /* Assets.xcassets */,
 				AC9FD00B2BC110BA00395FC2 /* LaunchScreen.storyboard */,
@@ -185,6 +188,7 @@
 				AC9FD02C2BC2528C00395FC2 /* APIManager.swift in Sources */,
 				AC9FD0252BC11B9800395FC2 /* SearchResultViewModel.swift in Sources */,
 				AC9FD0052BC110B900395FC2 /* ViewController.swift in Sources */,
+				AC9FD0332BC2D72200395FC2 /* APIError.swift in Sources */,
 				AC9FD02E2BC252BF00395FC2 /* AppStoreModel.swift in Sources */,
 				AC9FD0192BC1152B00395FC2 /* SearchResultTableViewCell.swift in Sources */,
 				AC9FD0272BC2519200395FC2 /* AppStoreAPI.swift in Sources */,

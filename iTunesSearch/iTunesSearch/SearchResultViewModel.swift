@@ -23,22 +23,20 @@ class SearchResultViewModel {
     
     func transform(input: Input) -> Output {
         
-        var output = BehaviorRelay<[AppStoreResult]>(value: [])
+        let output = BehaviorRelay<[AppStoreResult]>(value: [])
         
-        input.event.subscribe(with: self) { owner, search in
-            
-            let api = AppStoreAPI.software(term: search)
-            
-            APIManager.shared.callAPI(api: api, type: AppStoreModel.self) { result in
-                
-                switch result {
-                case .success(let success):
-                    output.accept(success.results)
-                case .failure(let failure):
-                    print(failure)
-                }
+        input.event
+            .throttle(.seconds(1), scheduler: MainScheduler.instance)
+            .map { AppStoreAPI.software(term: $0) }
+            .flatMap {
+                APIManager.shared.callAPI(api: $0, type: AppStoreModel.self)
             }
-        }.disposed(by: disposeBag)
+            .subscribe(with: self, onNext: { owner, data in
+                output.accept(data.results)
+                print("Transform Next")
+            }, onError: { _, _ in
+                print("Transform Error")
+            }).disposed(by: disposeBag)
         
         return Output(event: output)
     }

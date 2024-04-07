@@ -30,6 +30,9 @@ class SearchResultViewController: UIViewController {
         let input = SearchResultViewModel.Input(event: event)
         let output = viewModel.transform(input: input)
         
+        searchTableView.dataSource = nil
+        searchTableView.delegate = nil
+        
         output.event
             .bind(to: searchTableView.rx.items(
                 cellIdentifier: SearchTableViewCell.identifier,
@@ -45,13 +48,6 @@ class SearchResultViewController: UIViewController {
     }
 }
 
-extension SearchResultViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableView.rowHeight
-    }
-}
-
 extension SearchResultViewController {
     
     func configure() {
@@ -64,7 +60,6 @@ extension SearchResultViewController {
         
         searchTableView.register(SearchTableViewCell.self, forCellReuseIdentifier: SearchTableViewCell.identifier)
         searchTableView.rowHeight = UITableView.automaticDimension
-        searchTableView.delegate = self
         searchTableView.separatorStyle = .none
         searchTableView.backgroundColor = .clear
     }
