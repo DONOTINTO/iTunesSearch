@@ -17,6 +17,21 @@ class SearchResultViewController: UIViewController {
         
         configure()
     }
+    
+    func update(search: String) {
+        
+        let api = AppStoreAPI.software(term: "DoT - 여행 가계부")
+        
+        APIManager.shared.callAPI(api: api, type: AppStoreModel.self) { result in
+            
+            switch result {
+            case .success(let success):
+                dump(success)
+            case .failure(let failure):
+                print(failure)
+            }
+        }
+    }
 }
 
 extension SearchResultViewController: UITableViewDelegate, UITableViewDataSource {

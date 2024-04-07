@@ -21,6 +21,13 @@ class ViewController: UIViewController {
 extension ViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
+        guard let query = searchController.searchBar.text,
+              !query.trimmingCharacters(in: .whitespaces).isEmpty,
+              let resultVC = searchController.searchResultsController as? SearchResultViewController  else {
+            return
+        }
+        
+        resultVC.update(search: query)
     }
 }
 

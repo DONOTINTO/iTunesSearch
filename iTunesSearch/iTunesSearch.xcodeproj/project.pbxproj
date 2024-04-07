@@ -19,6 +19,11 @@
 		AC9FD01F2BC1157900395FC2 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = AC9FD01E2BC1157900395FC2 /* RxCocoa */; };
 		AC9FD0212BC1157900395FC2 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = AC9FD0202BC1157900395FC2 /* RxRelay */; };
 		AC9FD0232BC1157900395FC2 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AC9FD0222BC1157900395FC2 /* RxSwift */; };
+		AC9FD0252BC11B9800395FC2 /* SearchResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FD0242BC11B9800395FC2 /* SearchResultViewModel.swift */; };
+		AC9FD0272BC2519200395FC2 /* AppStoreAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FD0262BC2519200395FC2 /* AppStoreAPI.swift */; };
+		AC9FD02A2BC251EA00395FC2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AC9FD0292BC251EA00395FC2 /* Alamofire */; };
+		AC9FD02C2BC2528C00395FC2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FD02B2BC2528C00395FC2 /* APIManager.swift */; };
+		AC9FD02E2BC252BF00395FC2 /* AppStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FD02D2BC252BF00395FC2 /* AppStoreModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,10 @@
 		AC9FD00E2BC110BA00395FC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC9FD0142BC1129500395FC2 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		AC9FD0182BC1152B00395FC2 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		AC9FD0242BC11B9800395FC2 /* SearchResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewModel.swift; sourceTree = "<group>"; };
+		AC9FD0262BC2519200395FC2 /* AppStoreAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreAPI.swift; sourceTree = "<group>"; };
+		AC9FD02B2BC2528C00395FC2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		AC9FD02D2BC252BF00395FC2 /* AppStoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC9FD02A2BC251EA00395FC2 /* Alamofire in Frameworks */,
 				AC9FD0212BC1157900395FC2 /* RxRelay in Frameworks */,
 				AC9FD01F2BC1157900395FC2 /* RxCocoa in Frameworks */,
 				AC9FD0232BC1157900395FC2 /* RxSwift in Frameworks */,
@@ -72,7 +82,11 @@
 				AC9FD0022BC110B900395FC2 /* SceneDelegate.swift */,
 				AC9FD0042BC110B900395FC2 /* ViewController.swift */,
 				AC9FD0142BC1129500395FC2 /* SearchResultViewController.swift */,
+				AC9FD0242BC11B9800395FC2 /* SearchResultViewModel.swift */,
 				AC9FD0182BC1152B00395FC2 /* SearchResultTableViewCell.swift */,
+				AC9FD0262BC2519200395FC2 /* AppStoreAPI.swift */,
+				AC9FD02D2BC252BF00395FC2 /* AppStoreModel.swift */,
+				AC9FD02B2BC2528C00395FC2 /* APIManager.swift */,
 				AC9FD0062BC110B900395FC2 /* Main.storyboard */,
 				AC9FD0092BC110BA00395FC2 /* Assets.xcassets */,
 				AC9FD00B2BC110BA00395FC2 /* LaunchScreen.storyboard */,
@@ -102,6 +116,7 @@
 				AC9FD01E2BC1157900395FC2 /* RxCocoa */,
 				AC9FD0202BC1157900395FC2 /* RxRelay */,
 				AC9FD0222BC1157900395FC2 /* RxSwift */,
+				AC9FD0292BC251EA00395FC2 /* Alamofire */,
 			);
 			productName = iTunesSearch;
 			productReference = AC9FCFFD2BC110B900395FC2 /* iTunesSearch.app */;
@@ -134,6 +149,7 @@
 			packageReferences = (
 				AC9FD01A2BC1154E00395FC2 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				AC9FD01D2BC1157900395FC2 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				AC9FD0282BC251EA00395FC2 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = AC9FCFFE2BC110B900395FC2 /* Products */;
 			projectDirPath = "";
@@ -162,8 +178,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC9FD02C2BC2528C00395FC2 /* APIManager.swift in Sources */,
+				AC9FD0252BC11B9800395FC2 /* SearchResultViewModel.swift in Sources */,
 				AC9FD0052BC110B900395FC2 /* ViewController.swift in Sources */,
+				AC9FD02E2BC252BF00395FC2 /* AppStoreModel.swift in Sources */,
 				AC9FD0192BC1152B00395FC2 /* SearchResultTableViewCell.swift in Sources */,
+				AC9FD0272BC2519200395FC2 /* AppStoreAPI.swift in Sources */,
 				AC9FD0012BC110B900395FC2 /* AppDelegate.swift in Sources */,
 				AC9FD0152BC1129500395FC2 /* SearchResultViewController.swift in Sources */,
 				AC9FD0032BC110B900395FC2 /* SceneDelegate.swift in Sources */,
@@ -413,6 +433,14 @@
 				minimumVersion = 6.6.0;
 			};
 		};
+		AC9FD0282BC251EA00395FC2 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -435,6 +463,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AC9FD01D2BC1157900395FC2 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		AC9FD0292BC251EA00395FC2 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC9FD0282BC251EA00395FC2 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
