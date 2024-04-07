@@ -7,10 +7,16 @@
 
 import UIKit
 import SnapKit
+import RxSwift
+import RxCocoa
+import Kingfisher
 
 class SearchResultViewController: UIViewController {
     
     let searchTableView = UITableView()
+    let viewModel = SearchResultViewModel()
+    
+    let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,35 +26,29 @@ class SearchResultViewController: UIViewController {
     
     func update(search: String) {
         
-        let api = AppStoreAPI.software(term: "DoT - 여행 가계부")
+        let event = BehaviorRelay(value: search)
+        let input = SearchResultViewModel.Input(event: event)
+        let output = viewModel.transform(input: input)
         
-        APIManager.shared.callAPI(api: api, type: AppStoreModel.self) { result in
-            
-            switch result {
-            case .success(let success):
-                dump(success)
-            case .failure(let failure):
-                print(failure)
-            }
-        }
+        output.event
+            .bind(to: searchTableView.rx.items(
+                cellIdentifier: SearchTableViewCell.identifier,
+                cellType: SearchTableViewCell.self)
+            ) { row, element, cell in
+                
+                cell.appNameLabel.text = element.trackName
+                
+                guard let url = URL(string: element.artworkUrl100) else { return }
+                cell.appIconImageView.kf.setImage(with: url)
+                
+            }.disposed(by: disposeBag)
     }
 }
 
-extension SearchResultViewController: UITableViewDelegate, UITableViewDataSource {
+extension SearchResultViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return tableView.rowHeight
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier, for: indexPath) as? SearchTableViewCell else { return UITableViewCell() }
-        
-        return cell
     }
 }
 
@@ -65,7 +65,6 @@ extension SearchResultViewController {
         searchTableView.register(SearchTableViewCell.self, forCellReuseIdentifier: SearchTableViewCell.identifier)
         searchTableView.rowHeight = UITableView.automaticDimension
         searchTableView.delegate = self
-        searchTableView.dataSource = self
         searchTableView.separatorStyle = .none
         searchTableView.backgroundColor = .clear
     }
